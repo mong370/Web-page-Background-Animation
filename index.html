@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Table with Animated Background</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Canvas Background -->
+    <canvas id="network"></canvas>
+
+    <!-- Foreground UI -->
+    <div class="relative z-10 min-h-screen flex flex-col items-center p-6">
+
+        <h1 class="text-4xl font-bold mb-8 text-transparent bg-clip-text
+                bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+            Modern Table UI
+        </h1>
+
+        <!-- Form -->
+        <div class="flex flex-col sm:flex-row gap-4 mb-6 w-full max-w-xl">
+            <input id="name" placeholder="Name" class="p-3 border rounded-lg flex-1 focus:ring-2 focus:ring-purple-500">
+            <input id="quanta" type="email" placeholder="email"
+                class="p-3 border rounded-lg flex-1 focus:ring-2 focus:ring-purple-500">
+            <select id="className" class="p-3 border rounded-lg flex-1 focus:ring-2 focus:ring-purple-500">
+                <option disabled>Select Class</option>
+                <option>Eleve</option>
+                <option>Twelve</option>
+                <option>HSC</option>
+                <option>Admission</option>
+                <option selected>Versity</option>
+            </select>
+            <button onclick="createRow()"
+                class="px-6 py-3 rounded-lg text-white font-semibold bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-105 transition">
+                Submit
+            </button>
+        </div>
+
+        <!-- Table -->
+        <div class="w-full max-w-5xl overflow-x-auto">
+            <table id="table" class="w-full bg-white/90 backdrop-blur shadow-lg rounded-lg">
+                <thead class="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+                    <tr>
+                        <th class="p-3 text-left">SL</th>
+                        <th class="p-3 text-left">Name</th>
+                        <th class="p-3 text-left">email</th>
+                        <th class="p-3 text-left">Class</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
