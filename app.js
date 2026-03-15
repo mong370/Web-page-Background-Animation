@@ -1,9 +1,9 @@
 /* ===== TABLE ===== */
 let idx = 0;
 function createRow() {
-    const name = document.getElementById("name");
-    const quanta = document.getElementById("quanta");
-    const cls = document.getElementById("className");
+    const name = document.getElementById("name")
+    const quanta = document.getElementById("quanta")
+    const cls = document.getElementById("className")
 
     if (!name.value.trim() || !quanta.value.trim() || !cls.value) {
         alert("Fill all fields");
